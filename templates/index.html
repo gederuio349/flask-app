@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block title%}<title>Online-shop</title>{%endblock%}
+
+{%block body%}
+<body>
+
+
+    <div class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Pricing</h1>
+      <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+      <div class="card-deck mb-3 text-center">
+      {% for el in data %}
+         <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">{{el.title}}</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">{{el.price}}<strong>  рублей</strong></h1>
+            <br><br><br>
+            <a href="#" class="btn btn-lg btn-block btn-outline-primary">Заказать</a>
+          </div>
+      {% endfor %}
+      </div>
+
+
+
+</body>>
+{%endblock%}
